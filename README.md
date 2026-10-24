@@ -4,9 +4,8 @@ Two Linux HTTP endpoints on separate Docker networks and a diagnostic client att
 
 ## Architecture
 
-![System architecture](docs/architecture.png)
+![System architecture](docs/architecture.svg)
 
-[Editable SVG](docs/architecture.svg)
 
 ## Run
 
