@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120"><rect width="1600" height="1120" fill="white"/>
+<text x="800" y="70" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="38" font-weight="700" fill="#102b52">Network Health Lab</text>
+<text x="800" y="108" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="23" font-weight="400" fill="#102b52">Two internal networks, layered endpoint checks and controlled fault recovery</text>
+<rect x="25" y="140" width="1550" height="155" rx="4" fill="#eef6ff" stroke="#3575a5" stroke-width="2"/>
+<text x="800.0" y="174" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Host — lab.py + Docker Engine</text>
+<text x="800.0" y="206" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Build image  &gt;  create labeled resources  &gt;  run scenarios  &gt;  record evidence  &gt;  cleanup</text>
+<text x="800.0" y="235" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">CLI: up / check / test / down · commands execute inside the diagnostic client</text>
+<polyline points="800,295 800,350" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="800,350 794.345448056554,338.2941876694152 805.654551943446,338.2941876694152" fill="#17529a"/>
+<rect x="465" y="350" width="670" height="300" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="800.0" y="384" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Diagnostic client · dual-homed</text>
+<text x="800.0" y="416" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Attached to both networks; does not route traffic</text>
+<text x="800.0" y="445" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">health.py probes node-a and node-b independently</text>
+<rect x="500" y="470" width="600" height="145" rx="4" fill="#e7f3ff" stroke="#3575a5" stroke-width="2"/>
+<text x="800.0" y="504" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Layered health checks</text>
+<text x="800.0" y="536" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">1. DNS: resolve hostname  &gt;  address</text>
+<text x="800.0" y="565" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">2. TCP: connect to address:8080</text>
+<text x="800.0" y="594" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">3. HTTP: GET /  &gt;  status 200</text>
+<rect x="25" y="350" width="390" height="300" rx="4" fill="#e8f8eb" stroke="#469250" stroke-width="2"/>
+<text x="220.0" y="384" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Internal front network</text>
+<rect x="50" y="460" width="340" height="150" rx="4" fill="#f3fff5" stroke="#3575a5" stroke-width="2"/>
+<text x="220.0" y="493" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="21" font-weight="700" fill="#102b52">Endpoint A · node-a</text>
+<text x="220.0" y="526" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Python HTTP server :8080</text>
+<text x="220.0" y="555" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">UID 10001 · read-only root</text>
+<text x="220.0" y="584" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Independent healthy control</text>
+<rect x="1185" y="350" width="390" height="300" rx="4" fill="#e8f8eb" stroke="#469250" stroke-width="2"/>
+<text x="1380.0" y="384" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Internal back network</text>
+<rect x="1210" y="460" width="340" height="150" rx="4" fill="#f3fff5" stroke="#3575a5" stroke-width="2"/>
+<text x="1380.0" y="493" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="21" font-weight="700" fill="#102b52">Endpoint B · node-b</text>
+<text x="1380.0" y="526" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Python HTTP server :8080</text>
+<text x="1380.0" y="555" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">UID 10001 · read-only root</text>
+<text x="1380.0" y="584" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Target of selective failures</text>
+<polyline points="500,540 390,540" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="390,540 401.7058123305848,534.345448056554 401.7058123305848,545.654551943446" fill="#17529a"/>
+<polyline points="1100,540 1210,540" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="1210,540 1198.2941876694151,545.654551943446 1198.2941876694151,534.345448056554" fill="#17529a"/>
+<rect x="25" y="700" width="745" height="180" rx="4" fill="#fff5e3" stroke="#ca8a26" stroke-width="2"/>
+<text x="397.5" y="734" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Fault injection  &gt;  repair</text>
+<text x="397.5" y="766" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">DNS: invalid client resolver  &gt;  restore saved resolver</text>
+<text x="397.5" y="795" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Route: blackhole B /32  &gt;  remove exact route</text>
+<text x="397.5" y="824" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Firewall: reject B:8080  &gt;  remove exact OUTPUT rule</text>
+<text x="397.5" y="853" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Endpoint: stop B  &gt;  restart B</text>
+<rect x="820" y="700" width="755" height="180" rx="4" fill="#fff5e3" stroke="#ca8a26" stroke-width="2"/>
+<text x="1197.5" y="734" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Diagnostics + expected impact</text>
+<text x="1197.5" y="766" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Inspect: addresses, routes, resolver, firewall, nslookup</text>
+<text x="1197.5" y="795" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">DNS fault: both endpoints fail at DNS stage</text>
+<text x="1197.5" y="824" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Route / firewall: B fails at TCP; A stays healthy</text>
+<text x="1197.5" y="853" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Stopped B: one failed endpoint; A stays healthy</text>
+<polyline points="400,650 400,700" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="400,700 394.345448056554,688.2941876694152 405.654551943446,688.2941876694152" fill="#17529a"/>
+<polyline points="1200,650 1200,700" fill="none" stroke="#17529a" stroke-width="3"/>
+<polygon points="1200,700 1194.345448056554,688.2941876694152 1205.654551943446,688.2941876694152" fill="#17529a"/>
+<rect x="25" y="920" width="1550" height="105" rx="4" fill="#f1edff" stroke="#886ac5" stroke-width="2"/>
+<text x="800.0" y="954" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#102b52">Verification + evidence</text>
+<text x="800.0" y="986" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">Every scenario: baseline healthy  &gt;  validate affected endpoints + failure stage  &gt;  both healthy</text>
+<text x="800.0" y="1015" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#102b52">evidence/latest.json stores checks, failure groups, diagnostics, recovery and elapsed time</text>
+<polyline points="770,805 795,805 795,920" fill="none" stroke="#886ac5" stroke-width="3"/>
+<polygon points="795,920 789.345448056554,908.2941876694152 800.654551943446,908.2941876694152" fill="#886ac5"/>
+<text x="800" y="1069" text-anchor="middle" font-family="Noto Sans,Arial,sans-serif" font-size="19" font-weight="700" fill="#102b52">NET_ADMIN only on client · no host ports / mounts · cleanup removes labeled containers and networks</text></svg>

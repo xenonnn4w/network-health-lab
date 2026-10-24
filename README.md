@@ -2,6 +2,12 @@
 
 Two Linux HTTP endpoints on separate Docker networks and a diagnostic client attached to both. Health checks distinguish DNS resolution, TCP reachability, and HTTP responses, then group failures across endpoints.
 
+## Architecture
+
+![System architecture](docs/architecture.png)
+
+[Editable SVG](docs/architecture.svg)
+
 ## Run
 
 Requires Python 3.10+ and Docker Engine on Linux, with container-scoped `NET_ADMIN` support.
